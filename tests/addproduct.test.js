@@ -2,9 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test('TC02 : Add product to cart', async ({ page }) => {  
   await page.goto('https://www.amazon.in/');
-  // https://www.demoblaze.com/');
   await page.waitForTimeout(1000);
-  // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Amazon.in/);
   await page.waitForTimeout(1000);
   await page.locator(`//span[contains(.,'Refrigerator')]`).click();
